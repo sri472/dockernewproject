@@ -1,19 +1,19 @@
 version: '3.8'
 services:
   movies:
-    image: sasumalli/movies:tagname:latest
+    image: sasumalli/movies:tagname:tagname
     ports:
       - "81:80"
     deploy:
       replicas: 3
   train:
-    image: sasumalli/train:tagname:latest
+    image: sasumalli/train:tagname:tagname
     ports:
       - "82:80"
     deploy:
       replicas: 3
   dth:
-    image: sasumalli/dth:latest
+    image: sasumalli/dth:tagname
     ports:
       - "83:80"
     deploy:
